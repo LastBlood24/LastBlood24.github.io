@@ -9,81 +9,94 @@
     <meta name="description" content="Tablas">
 </head>
 <body>
-    <h1>Unidad 2 | Actividad 01 :: Tema (Tablas)</h1>
-    <h3>Celdas Combinadas</h3>
-    <table border="1">
-        <tr> <td>8</td> <td>1</td> <td>6</td> </tr>
-        <tr> <td>3</td> <td>5</td> <td>7</td> </tr>
-        <tr> <td>4</td> <td>9</td> <td>2</td> </tr>
-    </table>
-    
-    <h3>Cuadro mágico</h3>
-    <table border="5">
-        <tr align="center"><th colspan="4">Tabla No. 1</th></tr>
-        <tr align="center"><td rowspan="4">A</td><td>B</td><td rowspan="4">C</td><td>D</td></tr>
-        <tr align="center"><td rowspan="2">E</td><td rowspan="3">F</td></tr>
-        <tr align="center"></tr>
-        <tr align="center"><td>G</td></tr>
-        <tr align="center"><td>H</td><td>I</td><td>J</td><td>K</td></tr>
-    </table>
-    
-    <br>
-    <table border="5">
-        <tfoot>
-            <tr align="center"><td colspan="4"><code><small>Ejemplo con thead, <br> tbody y tfoot</small></code></td></tr>
-        </tfoot>
-        <tbody>
-            <tr align="center"><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-            <tr align="center"><td rowspan="3">5</td><td>6</td><td>7</td><td colspan="2">8</td></tr>
-            <tr align="center"><td rowspan="2">9</td><td>10</td><td rowspan="2">11</td></tr>
-            <tr align="center"><td>12</td></tr>
-        </tbody>
-        <thead>
-            <tr align="center"><th colspan="4">Tabla No. 2</th></tr>
-        </thead>
-    </table>
+    <h1>Unidad 2 | Actividad 2-1 :: Tema (Tablas)</h1>
+    <title>Tabla de la imagen 2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 700px; /* Ajusta el ancho según sea necesario */
+            height: 400px; /* Ajusta la altura según sea necesario */
+        }
+        td {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .a { width: 100px; height: 50px; }
+        .b { width: 100px; height: 50px; }
+        .c { width: 100px; height: 50px; }
+        .d { width: 100px; height: 50px; }
+        .e { width: 100px; height: 50px; }
+        .f { width: 100px; height: 50px; }
+        .g { width: 100px; height: 50px; }
+        .num1 { width: 100px; height: 50px; }
+        .num2 { width: 200px; height: 50px; }
+        .num3 { width: 100px; height: 50px; }
+        .num4 { width: 200px; height: 50px; }
+        .num5 { width: 100px; height: 50px; }
+        .num6 { width: 100px; height: 50px; }
+        .num7 { width: 100px; height: 50px; }
+        .num8 { width: 100px; height: 50px; }
+        .num9 { width: 100px; height: 50px; }
+        .num10 { width: 300px; height: 50px; }
+        .num11 { width: 200px; height: 50px; }
+        .num12 { width: 100px; height: 50px; }
+        .num13 { width: 700px; height: 50px; }
+        .num14 { width: 100px; height: 50px; }
+        .num15 { width: 100px; height: 50px; }
+        .num16 { width: 100px; height: 50px; }
+        .num17 { width: 100px; height: 50px; }
+        .num18 { width: 100px; height: 50px; }
+        .num19 { width: 100px; height: 50px; }
+        .num20 { width: 100px; height: 50px; }
+    </style>
+</head>
+<body>
 
-    <h3>Tabla adicional 1</h3>
-    <table border="1">
-        <tr><td>A</td><td>B</td><td>C</td><td>D</td></tr>
-        <tr><td>E</td><td>F</td><td>G</td><td>H</td></tr>
-        <tr><td>I</td><td>J</td><td>K</td><td>L</td></tr>
-        <tr><td>M</td><td>N</td><td>O</td><td>P</td></tr>
-    </table>
+<table>
+    <tr>
+        <td class="a">A</td>
+        <td class="b">B</td>
+        <td class="c">C</td>
+        <td class="d">D</td>
+        <td class="e">E</td>
+        <td class="f">F</td>
+        <td class="g">G</td>
+    </tr>
+    <tr>
+        <td class="num1"></td>
+        <td class="num2" colspan="2">1</td>
+        <td class="num3"></td>
+        <td class="num4" colspan="2">3</td>
+        <td class="num5">4</td>
+    </tr>
+    <tr>
+        <td class="num6">5</td>
+        <td class="num7">6</td>
+        <td class="num8">7</td>
+        <td class="num9">2</td>
+        <td class="num10" colspan="2">8</td>
+        <td class="num11">9</td>
+    </tr>
+    <tr>
+        <td class="num12"></td>
+        <td class="num13" colspan="3">10</td>
+        <td class="num14" colspan="2">11</td>
+        <td class="num15">12</td>
+    </tr>
+    <tr>
+        <td class="num16" colspan="7">13</td>
+    </tr>
+    <tr>
+        <td class="num17">14</td>
+        <td class="num18">15</td>
+        <td class="num19">16</td>
+        <td class="num20">17</td>
+        <td class="num1">18</td>
+        <td class="num2">19</td>
+        <td class="num3">20</td>
+    </tr>
+</table>
 
-    <h3>Tabla adicional 2</h3>
-    <table border="1">
-        <tr>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
-            <th>E</th>
-            <th>F</th>
-            <th>G</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td colspan="2">2</td>
-            <td>3</td>
-            <td>4</td>
-            <td rowspan="2">5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td rowspan="2">10</td>
-            <td>11</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-        </tr>
-    </table>
+</body>
+</html>
