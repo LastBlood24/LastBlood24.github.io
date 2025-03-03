@@ -151,40 +151,7 @@
 </table>
 
  <html>
-<head>
-<style>
-.container {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
 
-.cuadro {
-  border: 2px solid black;
-  padding: 10px;
-  display: grid;
-  gap: 2px;
-}
-
-.cuadro1 {
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(8, 30px);
-}
-
-.cuadro2 {
-  grid-template-columns: repeat(3, 40px) 40px 80px;
-  grid-template-rows: repeat(8, 30px);
-}
-
-.celda {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  border: 1px solid gray;
-}
-</style>
-</head>
 <body>
 
 <div class="container">
@@ -254,3 +221,110 @@
 
 </body>
 </html>
+
+
+    <html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  width: 800px; /* Ajusta el ancho según sea necesario */
+  border: 2px solid black; /* Borde para el contenedor principal */
+}
+
+.cell {
+  border: 1px solid black; /* Borde para cada celda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* Tamaño de fuente para las letras */
+}
+
+.A { grid-area: 11 / 1 / 12 / 2; }
+.B { grid-area: 10 / 2 / 11 / 3; }
+.C { grid-area: 9 / 3 / 10 / 4; }
+.D { grid-area: 8 / 4 / 9 / 5; }
+.E { grid-area: 7 / 5 / 8 / 6; }
+.F { grid-area: 6 / 6 / 7 / 7; }
+.G { grid-area: 5 / 7 / 6 / 8; }
+.GH { grid-area: 5 / 8 / 6 / 9; }
+.H { grid-area: 6 / 9 / 7 / 10; }
+.I { grid-area: 7 / 10 / 8 / 11; }
+.J { grid-area: 8 / 11 / 9 / 12; }
+.K { grid-area: 9 / 12 / 10 / 13; }
+.L { grid-area: 10 / 13 / 11 / 14; }
+.M { grid-area: 11 / 14 / 12 / 15; }
+.N { grid-area: 4 / 7 / 5 / 9; }
+.O { grid-area: 3 / 7 / 4 / 9; }
+.P { grid-area: 2 / 7 / 3 / 9; }
+.Q { grid-area: 1 / 7 / 2 / 9; }
+.R { grid-area: 10 / 3 / 11 / 4; }
+.S { grid-area: 10 / 4 / 11 / 5; }
+.T { grid-area: 10 / 5 / 11 / 6; }
+.U { grid-area: 10 / 6 / 11 / 7; }
+.V { grid-area: 10 / 7 / 11 / 8; }
+.W { grid-area: 10 / 8 / 11 / 9; }
+.X { grid-area: 10 / 9 / 11 / 10; }
+.Y { grid-area: 11 / 6 / 12 / 9; }
+.Z { grid-area: 12 / 1 / 13 / 2; }
+.one { grid-area: 12 / 2 / 13 / 3; }
+.two { grid-area: 12 / 3 / 13 / 4; }
+.three { grid-area: 12 / 4 / 13 / 5; }
+.four { grid-area: 12 / 5 / 13 / 6; }
+.five { grid-area: 12 / 6 / 13 / 7; }
+.six { grid-area: 12 / 7 / 13 / 8; }
+.seven { grid-area: 12 / 8 / 13 / 9; }
+.eight { grid-area: 12 / 9 / 13 / 10; }
+.nine { grid-area: 12 / 10 / 13 / 11; }
+.ten { grid-area: 12 / 11 / 13 / 12; }
+AH { grid-area: 4 / 7 / 5 / 9; } 
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="cell A">A</div>
+  <div class="cell B">B</div>
+  <div class="cell C">C</div>
+  <div class="cell D">D</div>
+  <div class="cell E">E</div>
+  <div class="cell F">F</div>
+  <div class="cell G">G</div>
+  <div class="cell GH">GH</div>
+  <div class="cell H">H</div>
+  <div class="cell I">I</div>
+  <div class="cell J">J</div>
+  <div class="cell K">K</div>
+  <div class="cell L">L</div>
+  <div class="cell M">M</div>
+  <div class="cell N">N</div>
+  <div class="cell O">O</div>
+  <div class="cell P">P</div>
+  <div class="cell Q">Q</div>
+  <div class="cell R">R</div>
+  <div class="cell S">S</div>
+  <div class="cell T">T</div>
+  <div class="cell U">U</div>
+  <div class="cell V">V</div>
+  <div class="cell W">W</div>
+  <div class="cell X">X</div>
+  <div class="cell Y">Y</div>
+  <div class="cell Z">Z</div>
+  <div class="cell one">1</div>
+  <div class="cell two">2</div>
+  <div class="cell three">3</div>
+  <div class="cell four">4</div>
+  <div class="cell five">5</div>
+  <div class="cell six">6</div>
+  <div class="cell seven">7</div>
+  <div class="cell eight">8</div>
+  <div class="cell nine">9</div>
+  <div class="cell ten">10</div>
+  <div class="cell AH">AH</div>
+</div>
+
+</body>
+</html>
+
