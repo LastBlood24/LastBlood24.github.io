@@ -149,72 +149,106 @@
         <td class="num3">20</td>
     </tr>
 </table>
-<html>
-<body>   
-    
-    
-    <div class="container">
+
+ <html>
+<head>
+<style>
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.cuadro {
+  border: 2px solid black;
+  padding: 10px;
+  display: grid;
+  gap: 2px;
+}
+
+.cuadro1 {
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(8, 30px);
+}
+
+.cuadro2 {
+  grid-template-columns: repeat(3, 40px) 40px 80px;
+  grid-template-rows: repeat(8, 30px);
+}
+
+.celda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid gray;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
   <div class="cuadro cuadro1">
-    <div class="celda celda1">1</div>
-    <div class="celda celda2">2</div>
-    <div class="celda celda2">2</div>
-    <div class="celda celda3">3</div>
-    <div class="celda celda3">3</div>
-    <div class="celda celda4">4</div>
-    <div class="celda celda4">4</div>
-    <div class="celda celda5">5</div>
-    <div class="celda celda5">5</div>
-    <div class="celda celda5">5</div>
-    <div class="celda celda4">4</div>
-    <div class="celda celda4">4</div>
-    <div class="celda celda6">6</div>
-    <div class="celda celda6">6</div>
-    <div class="celda celda7">7</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda9">9</div>
-    <div class="celda celda10">10</div>
-    <div class="celda celda11">11</div>
-    <div class="celda celda7">7</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda12">12</div>
-    <div class="celda celda12">12</div>
-    <div class="celda celda11">11</div>
-    <div class="celda celda7">7</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda13">13</div>
-    <div class="celda celda14">14</div>
-    <div class="celda celda14">14</div>
-    <div class="celda celda14">14</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda13">13</div>
-    <div class="celda celda15">15</div>
-    <div class="celda celda15">15</div>
-    <div class="celda celda16">16</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda13">13</div>
-    <div class="celda celda17">17</div>
-    <div class="celda celda17">17</div>
-    <div class="celda celda17">17</div>
+    <div class="celda">1</div>
+    <div class="celda">2</div>
+    <div class="celda">2</div>
+    <div class="celda">3</div>
+    <div class="celda">3</div>
+    <div class="celda">4</div>
+    <div class="celda">4</div>
+    <div class="celda">5</div>
+    <div class="celda">5</div>
+    <div class="celda">5</div>
+    <div class="celda">4</div>
+    <div class="celda">4</div>
+    <div class="celda">6</div>
+    <div class="celda">6</div>
+    <div class="celda">7</div>
+    <div class="celda">8</div>
+    <div class="celda">9</div>
+    <div class="celda">10</div>
+    <div class="celda">11</div>
+    <div class="celda">7</div>
+    <div class="celda">8</div>
+    <div class="celda">12</div>
+    <div class="celda">12</div>
+    <div class="celda">11</div>
+    <div class="celda">7</div>
+    <div class="celda">8</div>
+    <div class="celda">13</div>
+    <div class="celda">14</div>
+    <div class="celda">14</div>
+    <div class="celda">14</div>
+    <div class="celda">8</div>
+    <div class="celda">13</div>
+    <div class="celda">15</div>
+    <div class="celda">15</div>
+    <div class="celda">16</div>
+    <div class="celda">8</div>
+    <div class="celda">13</div>
+    <div class="celda">17</div>
+    <div class="celda">17</div>
+    <div class="celda">17</div>
   </div>
 
   <div class="cuadro cuadro2">
-    <div class="celda celda1">1</div>
-    <div class="celda celda2">2</div>
-    <div class="celda celda3">3</div>
-    <div class="celda celda4">4</div>
-    <div class="celda celda5">5</div>
-    <div class="celda celda6">6</div>
-    <div class="celda celda8">8</div>
-    <div class="celda celda9">9</div>
-    <div class="celda celda10">10</div>
-    <div class="celda celda11">11</div>
-    <div class="celda celda7">7</div>
-    <div class="celda celda12">12</div>
-    <div class="celda celda13">13</div>
-    <div class="celda celda14">14</div>
-    <div class="celda celda15">15</div>
-    <div class="celda celda16">16</div>
-    <div class="celda celda17">17</div>
+    <div class="celda">1</div>
+    <div class="celda">2</div>
+    <div class="celda">3</div>
+    <div class="celda">4</div>
+    <div class="celda">5</div>
+    <div class="celda">6</div>
+    <div class="celda">8</div>
+    <div class="celda">9</div>
+    <div class="celda">10</div>
+    <div class="celda">11</div>
+    <div class="celda">7</div>
+    <div class="celda">12</div>
+    <div class="celda">13</div>
+    <div class="celda">14</div>
+    <div class="celda">15</div>
+    <div class="celda">16</div>
+    <div class="celda">17</div>
   </div>
 </div>
 
