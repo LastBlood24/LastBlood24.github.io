@@ -13,11 +13,18 @@
           a { text-decoration: none; color: gray; text-transform: uppercase; } 
           a:hover { color: white; background-color: orangered; }
           ul { list-style: none; }
-          ul li ul { visibility: hidden; display}
+          ul li ul { visibility: hidden; display: none; position: absolute; }
+          ul li:hover > ul,ul li ul:hover { visibility: visible; display: block; }
+          li { display: block; float: left; position: relative; }
+          /* Reglas extra */
+          ul,li { border: 1px black solid; }
+          ul { margin: 0; padding-left: 0; }
+          li { padding: 0.5rem; min-width: 1.5rem; }
+          <li:hover { color: white; background-color: orangered; }
     </head>
     <body>
         <h1>Unidad 2 | Actividad 05 :: Tema(Menu)</h1>
-        <h2>Menu Principal</h2>
+        <h2> Menu´ Principal</h2>
         <nav>
           <ul>
           <li><a href="#">Inicio</a></li>
@@ -46,3 +53,5 @@
           <li><a href="a">Bolsa de trabajo</a></li>
       </ul>
     </nav>
+    </body>
+    </html>
