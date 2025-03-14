@@ -1,46 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <title>Unidad 2 | Actividad No4-1</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta charset="utf-8">
-    <meta name="Autor" content="Diaz Rodriguez Andres David">
-    <meta name="Fecha" content="14 de marzo del 2025">
-    <meta name="Detalle" content="Maze Runner">
-</head>    
+<title>Linkin Park Band Members</title>
+<style>
+  body {
+    font-family: Arial, sans-serif; /* Fuente genérica similar */
+  }
+
+  h1, h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Intento de simular la fuente manuscrita */
+    font-weight: normal; /* Elimina la negrita predeterminada */
+  }
+
+  h3 {
+    font-size: 1.2em; /* Ajusta el tamaño para que coincida */
+  }
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .toggle-content {
+    display: none;
+  }
+</style>
+</head>
 <body>
 
 <h1>UNIDAD 21 ACTIVIDAD 04-2:: TEMA (TIPOGRAFIA)</h1>
 
 <h2>LINKIN PARK ~ BAND MEMBERS</h2>
 
-<h3>CHESTER BENNINGTON</h3>
+<h3 onclick="toggleContent('chester')">
+  <span id="chester-arrow">►</span> CHESTER BENNINGTON
+</h3>
 
-<table>
-  <ul>
-    <li><strong>Name</strong></li>
-    <li>Chester Charles Bennington</li>
-    <li><strong>Born</strong></li>
-    <li>March 20, 1976 Phoenix, Arizona, U.S.</li>
-    <li><strong>Died</strong></li>
-    <li>July 20, 2017 (aged 41) Palos Verdes Estates, California, U.S.</li>
-    <li><strong>Genres</strong></li>
-    <li>Alternative metal, nu metal, hard rock, alternative rock, electronic rock, pop rock</li>
-    <li><strong>Occupation</strong></li>
-    <li>Singer, songwriter, actor</li>
-    <li><strong>Instruments</strong></li>
-    <li>Vocals</li>
-    <li><strong>Years active</strong></li>
-    <li>1992-2017</li>
-    <td colspan="2"><img src="no-image-available.png" alt="No image available"></li>
-  </ul>
-</table>
+<div id="chester" class="toggle-content">
+  <table>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>Chester Charles Bennington</td>
+    </tr>
+    <tr>
+      <td><strong>Born</strong></td>
+      <td>March 20, 1976 Phoenix, Arizona, U.S.</td>
+    </tr>
+    <tr>
+      <td><strong>Died</strong></td>
+      <td>July 20, 2017 (aged 41) Palos Verdes Estates, California, U.S.</td>
+    </tr>
+    <tr>
+      <td><strong>Genres</strong></td>
+      <td>Alternative metal, nu metal, hard rock, alternative rock, electronic rock, pop rock</td>
+    </tr>
+    <tr>
+      <td><strong>Occupation</strong></td>
+      <td>Singer, songwriter, actor</td>
+    </tr>
+    <tr>
+      <td><strong>Instruments</strong></td>
+      <td>Vocals</td>
+    </tr>
+    <tr>
+      <td><strong>Years active</strong></td>
+      <td>1992-2017</td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="no-image-available.png" alt="No image available"></td>
+    </tr>
+  </table>
+</div>
 
 <h3>►ROB BOURDON</h3>
 <h3>►MIKE SHINODA</h3>
 <h3>►BRAD DELSON</h3>
 <h3>►JOE HAHN</h3>
 <h3>►DAVE FARRELL</h3>
+
+<script>
+  function toggleContent(id) {
+    var content = document.getElementById(id);
+    var arrow = document.getElementById(id + '-arrow');
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      arrow.innerHTML = "▼";
+    } else {
+      content.style.display = "none";
+      arrow.innerHTML = "►";
+    }
+  }
+</script>
 
 </body>
 </html>
