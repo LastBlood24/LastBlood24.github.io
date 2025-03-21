@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unidad 2 | Actividad 07</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="author" content="Diaz Rodriguez Andres David">
+    <meta name="fecha" content="20 de marzo de 2023">
+    <meta name="description" content="Bootstrap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .navbar {
+            color: white;
+            background-color: orangered;
+        }
+        .dropdown-item:hover {
+            color: white;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarlar" aria-controls="navbarlar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarlar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="border-top: 5px solid orangered;">
+                        <a class="dropdown-item" href="#">Nuestra universidad</a>
+                        <a class="dropdown-item" href="#">Modelo académico</a>
+                        <a class="dropdown-item" href="#">Directorio</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
