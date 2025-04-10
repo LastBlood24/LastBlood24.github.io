@@ -85,6 +85,32 @@
     text-transform: uppercase;animation-timing-function: linear; animation-direction:reverse;
     animation-name: progreso;animation-duration: 5s; animation-delay: 1s;
 }
+.rainbow {
+  width: 100px; height: 100px; color: white;
+  border: 2px dashed black;
+  animation-name: rgb; animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.arcoiris {
+  width: 100px; height: 100px; color: white;
+  border: 2px dashed black;
+  animation-name: rgb; animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rgb {
+  0% { background-color: green; }
+  16% { background-color: yellow; }
+  33% { background-color: orange; }
+  50% { background-color: red; }
+  67% { background-color: purple; }
+  82% { background-color: blue; }
+  100% { background-color: green; }
+}
+
 @keyframes progreso{
     0%{width: 0px; background-color: red;}
     33%{width: 250px; background-color: orange;}
