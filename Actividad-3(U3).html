@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 | Actividad 03</title>
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 03 :: Tema (JavaScript)</h1>
+    <script>
+        let opc = window.prompt("Menú de opciones:\n 1. Sumar\n 2. Restar\n 3. Multiplicar\n 4. Dividir\n¿Qué opción deseas?");
+        let val_1 = Number(window.prompt("Cuál es el primer valor?"));
+        let val_2 = Number(window.prompt("Cuál es el segundo valor?"));
+
+        switch(opc) {
+            case "1":
+                document.write("<h3>Operación Suma</h3>");
+                document.write("<p><code"> + val_1 + " + " + val_2 + " = " + (val_1 + val_2) + "</code></p>");
+                break;
+            case "2":
+                document.write("<h3>Operación Resta</h3>");
+                document.write("<p><code>" + val_1 + " - " + val_2 + " = " + (val_1 - val_2) + "</code></p>");
+                break;
+            case "3":
+                document.write("<h3>Operación Multiplicación</h3>");
+                document.write("<p><code>" + val_1 + " * " + val_2 + " = " + (val_1 * val_2) + "</code></p>");
+                break;
+            case "4":
+                document.write("<h3>Operación División</h3>");
+                document.write("<p><code>" + val_1 + " / " + val_2 + " = " + (val_1 / val_2) + "</code></p>");
+                break;
+            default:
+                document.write("<p>Opción inválida.</p>");
+        }
+    </script>
+</body>
+</html>
