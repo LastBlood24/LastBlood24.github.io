@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 | Actividad 04</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Rubén Cárdenas Sánchez">
+    <meta name="Fecha" content="07 de mayo de 2025">
+    <meta name="Descripción" content="JavaScript">
+    <style>
+        li { text-transform: uppercase; color: white; background-color: navy; }
+    </style>
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 04 :: Tema (JavaScript)</h1>
+    <ol>
+        <li id="valor_1"><strong>ITESM</strong> <small>(Campus San Luis Potosí)</small></li>
+        <li id="valor_8"></li>
+        <li id="valor_9"></li>
+        <li id="valor_10"></li>
+    </ol>
+    <script>
+        // Asignar contenido
+        document.getElementById("valor_2").textContent = "UCEM"; // Parece haber un error en la imagen, no hay elemento con id "valor_2" en el HTML visible. Asumiendo que querías modificar otro elemento.
+
+        // Recuperar contenido
+        let varTemp = document.getElementById("valor_1").textContent;
+        document.write("<p>El primer valor es: <strong>" + varTemp + "</strong></p>");
+
+        document.getElementById("valor_3").textContent = varTemp + "!!!";
+
+        varTemp = document.getElementById("valor_7").textContent; // No hay elemento con id "valor_7" en el HTML visible.
+        document.getElementById("valor_8").textContent = varTemp;
+
+        varTemp = document.getElementById("valor_7").innerText; // No hay elemento con id "valor_7" en el HTML visible.
+        document.getElementById("valor_9").innerText = varTemp;
+
+        varTemp = document.getElementById("valor_7").innerHTML; // No hay elemento con id "valor_7" en el HTML visible.
+        document.getElementById("valor_10").innerHTML = varTemp;
+    </script>
+</body>
+</html>
