@@ -1,121 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Unidad 3 | Actividad 03 :: Tema (JavaScript) - Calculadora Tabla</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Tu Nombre">
+    <meta name="Fecha" content="7 de mayo de 2025">
+    <meta name="Descripción" content="Calculadora en forma de tabla">
     <style>
         body {
             font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
         }
-        .calculadora {
-            background-color: #333;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        h1 {
+            margin-bottom: 20px;
         }
         table {
-            width: auto;
+            border-collapse: collapse;
+            width: 200px;
+            margin: 20px auto;
         }
-        input[type="text"] {
-            width: calc(100% - 16px);
+        td {
+            border: 1px solid #ccc;
             padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 3px;
-            font-size: 1.5em;
-            text-align: right;
-            background-color: #444;
-            color: white;
+            text-align: center;
         }
-        button {
-            width: 50px;
-            height: 50px;
-            font-size: 1.2em;
-            margin: 5px;
-            border: none;
-            border-radius: 3px;
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
             cursor: pointer;
-            background-color: #555;
-            color: white;
         }
-        button.operator {
-            background-color: #ffa500;
-        }
-        button.equal {
-            background-color: #4caf50;
-        }
-        button.clear {
-            background-color: #f44336;
+        #display {
+            text-align: right;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
+    <h1>Unidad 3 | Actividad 03 :: Tema (JavaScript) - Calculadora Tabla</h1>
 
-    <div class="calculadora">
+    <div id="calculator">
         <table>
             <tr>
-                <td colspan="4"><input type="text" id="display" disabled></td>
+                <td colspan="4"><div id="display"></div></td>
             </tr>
             <tr>
-                <td><button onclick="appendToDisplay('7')">7</button></td>
-                <td><button onclick="appendToDisplay('8')">8</button></td>
-                <td><button onclick="appendToDisplay('9')">9</button></td>
-                <td><button class="operator" onclick="appendToDisplay('+')">+</button></td>
+                <td><input type="button" value="7" onclick="appendToDisplay('7')"></td>
+                <td><input type="button" value="8" onclick="appendToDisplay('8')"></td>
+                <td><input type="button" value="9" onclick="appendToDisplay('9')"></td>
+                <td><input type="button" value="+" onclick="appendToDisplay('+')"></td>
             </tr>
             <tr>
-                <td><button onclick="appendToDisplay('4')">4</button></td>
-                <td><button onclick="appendToDisplay('5')">5</button></td>
-                <td><button onclick="appendToDisplay('6')">6</button></td>
-                <td><button class="operator" onclick="appendToDisplay('-')">-</button></td>
+                <td><input type="button" value="4" onclick="appendToDisplay('4')"></td>
+                <td><input type="button" value="5" onclick="appendToDisplay('5')"></td>
+                <td><input type="button" value="6" onclick="appendToDisplay('6')"></td>
+                <td><input type="button" value="-" onclick="appendToDisplay('-')"></td>
             </tr>
             <tr>
-                <td><button onclick="appendToDisplay('1')">1</button></td>
-                <td><button onclick="appendToDisplay('2')">2</button></td>
-                <td><button onclick="appendToDisplay('3')">3</button></td>
-                <td><button class="operator" onclick="appendToDisplay('*')">×</button></td>
+                <td><input type="button" value="1" onclick="appendToDisplay('1')"></td>
+                <td><input type="button" value="2" onclick="appendToDisplay('2')"></td>
+                <td><input type="button" value="3" onclick="appendToDisplay('3')"></td>
+                <td><input type="button" value="*" onclick="appendToDisplay('*')"></td>
             </tr>
             <tr>
-                <td><button onclick="appendToDisplay('0')">0</button></td>
-                <td><button onclick="appendToDisplay('.')">.</button></td>
-                <td><button class="equal" onclick="calculate()">=</button></td>
-                <td><button class="operator" onclick="appendToDisplay('/')">÷</button></td>
+                <td><input type="button" value="0" onclick="appendToDisplay('0')"></td>
+                <td><input type="button" value="." onclick="appendToDisplay('.')"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
+                <td><input type="button" value="/" onclick="appendToDisplay('/')"></td>
             </tr>
             <tr>
-                <td colspan="4"><button class="clear" onclick="clearDisplay()">C</button></td>
+                <td colspan="4"><input type="button" value="C" onclick="clearDisplay()"></td>
             </tr>
         </table>
     </div>
 
     <script>
-        let display = document.getElementById('display');
+        let displayElement = document.getElementById('display');
         let currentInput = '';
 
         function appendToDisplay(value) {
             currentInput += value;
-            display.value = currentInput;
+            displayElement.textContent = currentInput;
         }
 
         function clearDisplay() {
             currentInput = '';
-            display.value = '';
+            displayElement.textContent = '';
         }
 
         function calculate() {
             try {
                 currentInput = eval(currentInput);
-                display.value = currentInput;
+                displayElement.textContent = currentInput;
             } catch (error) {
-                display.value = 'Error';
+                displayElement.textContent = 'Error';
                 currentInput = '';
             }
         }
     </script>
-
 </body>
 </html>
