@@ -1,165 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Unidad 3 | Actividad 03 :: Tema (JavaScript) - Calculadora Tabla</title>
+    <title>Unidad 3 | Actividad 03-1</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="utf-8">
-    <meta name="Autor" content="Tu Nombre">
+    <meta name="Autor" content="Diaz Rodriguez Andres David">
     <meta name="Fecha" content="7 de mayo de 2025">
-    <meta name="Descripción" content="Calculadora HTML similar a la tabla">
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        #calculator-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-        table {
-            border-collapse: collapse;
-            margin-right: 20px; /* Espacio entre la tabla de referencia y la calculadora */
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-        }
-        tr:nth-child(odd) {
-            background-color: #aee2ff;
-        }
-        tr:nth-child(5) {
-            background-color: #ff69b4;
-        }
-        #calculator-table {
-            border-collapse: collapse;
-        }
-        #calculator-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        #display {
-            width: 100%;
-            padding: 10px;
-            font-size: 1.2em;
-            text-align: right;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
-        }
-        .calc-button {
-            width: 50px;
-            height: 40px;
-            font-size: 1em;
-            cursor: pointer;
-            margin: 2px;
-        }
-        .operator {
-            background-color: #f0ad4e;
-            color: white;
-        }
-        .equal {
-            background-color: #5cb85c;
-            color: white;
-        }
-        .clear {
-            background-color: #d9534f;
-            color: white;
-        }
+    <meta name="Descripción" content="JavaScript">
+    <style type="text/css">
+        table { border: 1px solid lightgray; border-collapse: collapse; width: 50%; }
+        th, td { text-align: left; padding: 10px; }
+        tr:nth-child(even) { background-color: cyan; }
+        tr:hover { background-color: deeppink; }
     </style>
 </head>
 <body>
-    <h1>Unidad 3 | Actividad 03 :: Tema (JavaScript)</h1>
-
-    <div id="calculator-container">
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Suma</th>
-                        <th>Multiplica</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>5 + 1 = 6</td><td>5 × 1 = 5</td></tr>
-                    <tr><td>2</td><td>5 + 2 = 7</td><td>5 × 2 = 10</td></tr>
-                    <tr><td>3</td><td>5 + 3 = 8</td><td>5 × 3 = 15</td></tr>
-                    <tr><td>4</td><td>5 + 4 = 9</td><td>5 × 4 = 20</td></tr>
-                    <tr style="background-color: #ff69b4;"><td>5</td><td>5 + 5 = 10</td><td>5 × 5 = 25</td></tr>
-                    <tr><td>6</td><td>5 + 6 = 11</td><td>5 × 6 = 30</td></tr>
-                    <tr><td>7</td><td>5 + 7 = 12</td><td>5 × 7 = 35</td></tr>
-                    <tr><td>8</td><td>5 + 8 = 13</td><td>5 × 8 = 40</td></tr>
-                    <tr><td>9</td><td>5 + 9 = 14</td><td>5 × 9 = 45</td></tr>
-                    <tr><td>10</td><td>5 + 10 = 15</td><td>5 × 10 = 50</td></tr>
-                </tbody>
-            </table>
-            <p>Esta es la tabla de referencia.</p>
-        </div>
-
-        <div>
-            <h2>Calculadora</h2>
-            <table id="calculator-table">
-                <tr>
-                    <td colspan="4"><div id="display"></div></td>
-                </tr>
-                <tr>
-                    <td><button class="calc-button" onclick="appendToDisplay('7')">7</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('8')">8</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('9')">9</button></td>
-                    <td><button class="calc-button operator" onclick="appendToDisplay('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="calc-button" onclick="appendToDisplay('4')">4</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('5')">5</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('6')">6</button></td>
-                    <td><button class="calc-button operator" onclick="appendToDisplay('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="calc-button" onclick="appendToDisplay('1')">1</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('2')">2</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('3')">3</button></td>
-                    <td><button class="calc-button operator" onclick="appendToDisplay('*')">*</button></td>
-                </tr>
-                <tr>
-                    <td><button class="calc-button" onclick="appendToDisplay('0')">0</button></td>
-                    <td><button class="calc-button" onclick="appendToDisplay('.')">.</button></td>
-                    <td><button class="calc-button equal" onclick="calculate()">=</button></td>
-                    <td><button class="calc-button operator" onclick="appendToDisplay('/')">/</button></td>
-                </tr>
-                <tr>
-                    <td colspan="4"><button class="calc-button clear" style="width: 100%;" onclick="clearDisplay()">C</button></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
+    <h1>Unidad 3 | Actividad 03-1 :: Tema (JavaScript)</h1>
     <script>
-        let displayElement = document.getElementById('display');
-        let currentInput = '';
+        let numTabla, numValores;
+        do{
+            numTabla = window.prompt("Cuál tabla deseas calcular [1 - 10]:");
+            numTabla = Number(numTabla);
+        }while(numTabla < 1 || numTabla > 10);
+        do{
+            numValores = window.prompt("Cuántos valores deseas mostrar [10 - 100]:");
+            numValores = Number(numValores);
+        }while(numValores < 10 || numValores > 100);
 
-        function appendToDisplay(value) {
-            currentInput += value;
-            displayElement.textContent = currentInput;
+        document.write("<table>");
+        document.write("<tr><th>No.</th><th>Suma</th><th>Multiplica</th></tr>");
+
+        for (let i = 1; i <= numValores; i++) {
+            document.write("<tr><td>" + i + "</td>");
+            document.write("<td>" + numTabla + " + " + i + " = " + (numTabla + i) + "</td>");
+            document.write("<td>" + numTabla + " * " + i + " = " + (numTabla * i) + "</td></tr>");
         }
 
-        function clearDisplay() {
-            currentInput = '';
-            displayElement.textContent = '';
-        }
-
-        function calculate() {
-            try {
-                currentInput = eval(currentInput);
-                displayElement.textContent = currentInput;
-            } catch (error) {
-                displayElement.textContent = 'Error';
-                currentInput = '';
-            }
-        }
+        document.write("</table>");
     </script>
 </body>
 </html>
