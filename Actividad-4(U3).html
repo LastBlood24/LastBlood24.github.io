@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Unidad 3 | Actividad 04</title>
+    <title>Unidad 3 :: Actividad 04</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="utf-8">
-    <meta name="Autor" content="Rubén Cárdenas Sánchez">
+    <meta name="Autor" content="Diaz Rodriguez Andres David">
     <meta name="Fecha" content="07 de mayo de 2025">
     <meta name="Descripción" content="JavaScript">
     <style>
-        li { text-transform: uppercase; color: white; background-color: navy; }
+        i {text-transform: uppercase; color: white; background-color: navy;}
     </style>
 </head>
 <body>
-    <h1>Unidad 3 | Actividad 04 :: Tema (JavaScript)</h1>
+    <h1>Unidad 3 :: Actividad 04 :: Tema (JavaScript)</h1>
     <ol>
-        <li id="valor_1"><strong>ITESM</strong> <small>(Campus San Luis Potosí)</small></li>
-        <li id="valor_8"></li>
-        <li id="valor_9"></li>
-        <li id="valor_10"></li>
+        <li id="valor_1"><strong>UFPSLP</strong></li>
+        <li id="valor_2">Valor 2</li>
+        <li id="valor_3">Valor 3</li>
+        <li id="valor_4">Valor 4</li>
+        <li id="valor_5">Valor 5</li>
+        <li id="valor_6">Valor 6</li>
+        <li id="valor_7"><strong>ITESM ( Campus San Luis Potosí )</strong></li>
+        <li id="valor_8">Valor 8</li>
+        <li id="valor_9">Valor 9</li>
+        <li id="valor_10">Valor 10</li>
     </ol>
     <script>
         // Asignar contenido
-        document.getElementById("valor_2").textContent = "UCEM"; // Parece haber un error en la imagen, no hay elemento con id "valor_2" en el HTML visible. Asumiendo que querías modificar otro elemento.
+        document.getElementById("valor_2").textContent = "UCEM";
 
         // Recuperar contenido
         let varTemp = document.getElementById("valor_1").textContent;
-        document.write("<p>El primer valor es: <strong>" + varTemp + "</strong></p>");
-
-        document.getElementById("valor_3").textContent = varTemp + "!!!";
-
-        varTemp = document.getElementById("valor_7").textContent; // No hay elemento con id "valor_7" en el HTML visible.
+        document.getElementById("valor_3").textContent = varTemp + " !!!";
+        varTemp = document.getElementById("valor_7").textContent;
         document.getElementById("valor_8").textContent = varTemp;
-
-        varTemp = document.getElementById("valor_7").innerText; // No hay elemento con id "valor_7" en el HTML visible.
-        document.getElementById("valor_9").innerText = varTemp;
-
-        varTemp = document.getElementById("valor_7").innerHTML; // No hay elemento con id "valor_7" en el HTML visible.
+        varTemp = document.getElementById("valor_9").innerText;
+        document.getElementById("valor_4").innerText = varTemp;
+        varTemp = document.getElementById("valor_7").innerHTML;
         document.getElementById("valor_10").innerHTML = varTemp;
     </script>
 </body>
