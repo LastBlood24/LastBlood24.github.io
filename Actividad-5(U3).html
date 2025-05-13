@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 | Actividad 05 :: Formulario</title>
+    <link rel="icon" href="image/x-icon" href="favicon.ico">
+    <meta name="Autor" content="Diaz Rodriguez Andres David">
+    <meta name="Descripción" content="Formulario">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script>
+        function revisaDatos() {
+            let varCadena = "Resumen del Formulario:\n";
+            varCadena += "-------------------------\n";
+            varCadena += "Nombre de usuario: " + varNombre.value + "\n";
+            varCadena += "Contraseña: " + varPassclave.value + "\n";
+            varCadena += "Teléfono: " + varTelefono.value + "\n";
+            varCadena += "Correo: " + varCorreo.value + " - " + varCorreo.value.toLowerCase() + "\n";
+            varCadena += "Mensaje: " + varMensaje.value + "\n";
+            alert(varCadena);
+        }
+    </script>
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 05 :: Tema (Formulario)</h1>
+    <form onsubmit="revisaDatos()" class="form-horizontal" name="frmregistro" action="#" method="post">
+        <fieldset>
+            <legend>Registro de Usuario / <small>Legend</small></legend>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtNombre">Nombre de usuario</label>
+                <div class="col-md-4">
+                    <input id="txtNombre" name="txtNombre" type="text" placeholder="José Díaz García" class="form-control input-md" required="">
+                    <span class="help-block">Escribe tu nombre completo</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passclave">Contraseña</label>
+                <div class="col-md-4">
+                    <input id="passclave" name="passclave" type="password" placeholder="Placeholder" class="form-control input-md" required="">
+                    <span class="help-block">Debe tener al menos 8 símbolos (únicamente letras y dígitos)</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="telefono">Teléfono</label>
+                <div class="col-md-4">
+                    <input id="telefono" name="telefono" type="text" placeholder="55 5555 5555" class="form-control input-md">
+                    <span class="help-block">Escribe un número de teléfono válido</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="correo">Correo electrónico</label>
+                <div class="col-md-4">
+                    <input id="correo" name="correo" type="email" placeholder="correo@popol.edu.mx" class="form-control input-md" required="">
+                    <span class="help-block">Escribe una dirección de correo válida</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="mensaje">Mensaje</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="mensaje" name="mensaje"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="enviar"></label>
+                <div class="col-md-4">
+                    <button id="enviar" name="enviar" class="btn btn-primary">Enviar datos</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+</html>
