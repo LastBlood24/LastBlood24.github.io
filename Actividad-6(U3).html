@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 | Actividad 06</title>
+    <link rel="icon" href="image/x-icon" href="favicon.ico">
+    <meta name="Autor" content="Rubén Cárdenas Sánchez">
+    <meta name="Fecha" content="12 de Mayo de 2025">
+    <meta name="Descripción" content="JavaScript">
+    <style>
+        p { color: limegreen; background-color: black; border: crimson 2px dashed; }
+    </style>
+    <script>
+        function functionClick() { document.getElementById("varParrafo").innerHTML = "Hola mundo con Click!!<br><br>"; }
+        function functionDobleClick() { document.getElementById("varParrafo").innerHTML += "Hola mundo con DobleClick!!<br><br>"; }
+        function functionOver(obj) { if ( navigator.cookieEnabled == true ) { alert("Bienvenido a mi sitio web!!!"); } }
+        function functionOut(obj) { obj.style.backgroundColor = "Navy"; }
+        function cambiaColor(color) { document.body.style.backgroundColor = color; }
+    </script>
+</head>
+<body onload="functionValidar()">
+    <h1>Unidad 3 | Actividad 06 :: Tema (JavaScript - Eventos)</h1>
+    <h3>Presiona el botón para ejecutar el código.</h3>
+    <button onclick="functionClick()">Acción...</button>
+    <button ondblclick="functionDobleClick()">Acción...</button>
+    <p id="varParrafo" onmouseover="functionOver(this)" onmouseout="functionOut(this)"></p>
+    <fieldset>
+        <legend>Elige un color fondo...</legend>
+        <button onclick="cambiaColor('SteelBlue')">Azul</button>
+        <button onclick="cambiaColor('Crimson')">Rojo</button>
+        <button onclick="cambiaColor('Seagreen')">Verde</button>
+    </fieldset>
+</body>
+</html>
