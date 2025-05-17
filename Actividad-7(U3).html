@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 Actividad 07</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Rubén Cárdenas Sánchez">
+    <meta name="Fecha" content="13 de mayo de 2015">
+    <meta name="Descripcion" content="JavaScript">
+    <script src="Actividad_07.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Unidad 3 Actividad 07 :: Tema (JavaScript)</h1>
+    </header>
+    <form class="form-horizontal" name="frmControles" action="#" method="post" onsubmit="return validarControles()">
+        <fieldset>
+            <legend>Form Name</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="groupRadio">Elige el tamaño</label>
+                <div class="col-md-4">
+                    <div class="radio">
+                        <label for="radio-0">
+                            <input type="radio" name="groupRadio" id="groupRadio-0" value="50" checked="checked">
+                            Combo pequeño
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="radio-1">
+                            <input type="radio" name="groupRadio" id="groupRadio-1" value="125">
+                            Combo mediano
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="radio-2">
+                            <input type="radio" name="groupRadio" id="groupRadio-2" value="150">
+                            Combo grande
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Multiple Checkboxes</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="groupCheck">Elige ingredientes</label>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="checkbox-0">
+                            <input type="checkbox" name="groupCheck" id="groupCheck-0" value="1">
+                            Queso
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="checkbox-1">
+                            <input type="checkbox" name="groupCheck" id="groupCheck-1" value="2">
+                            Jamón
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="checkbox-2">
+                            <input type="checkbox" name="groupCheck" id="groupCheck-2" value="3">
+                            Tocino
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="checkbox-3">
+                            <input type="checkbox" name="groupCheck" id="groupCheck-3" value="4">
+                            Champiñones
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="checkbox-4">
+                            <input type="checkbox" name="groupCheck" id="groupCheck-4" value="5">
+                            Pepperoni
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Basic</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectBasic">Elige complemento</label>
+                <div class="col-md-4">
+                    <select id="selectBasic" name="selectBasic" class="form-control">
+                        <option value="ninguno">Ninguno</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <option value="0">Ninguno</option>
+                        <option value="1">Papas</option>
+                        <option value="2">Brownies</option>
+                        <option value="3">Refresco</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Multiple</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectmultiple">Elige otras opciones</label>
+                <div class="col-md-4">
+                    <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                        <option value="1">Mayonesa</option>
+                        <option value="2">Catsup</option>
+                        <option value="3">Mostaza</option>
+                        <option value="4">Ranch</option>
+                        <option value="5">Repollo</option>
+                        <option value="6">Jalapeños</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros controles</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtArchivo">Archivo</label>
+                <div class="col-md-4">
+                    <input type="file" id="txtArchivo" name="varFile" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtColor">Color</label>
+                <div class="col-md-4">
+                    <input type="color" id="txtColor" name="varColor" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtFecha">Fechas</label>
+                <div class="col-md-4">
+                    <input type="date" id="txtFecha" name="varDate" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtTiempo">Tiempo</label>
+                <div class="col-md-4">
+                    <input type="time" id="txtTiempo" name="varTime" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtSemana">Semana</label>
+                <div class="col-md-4">
+                    <input type="week" id="txtSemana" name="varWeek" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtMes">Mes</label>
+                <div class="col-md-4">
+                    <input type="month" id="txtMes" name="varMonth" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtNumero">Numero</label>
+                <div class="col-md-4">
+                    <input type="number" id="txtNumero" name="varNumber" class="form-control" min="0" max="100" step="10" value="50">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtRango">Rango</label>
+                <div class="col-md-4">
+                    <input type="range" id="txtRango" name="varRange" class="form-control" min="0" max="100" step="1" value="50">
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <div class="col-md-4">
+                <input type="submit" id="btnEnviar" name="btnEnviar" class="btn btn-primary">
+                <input type="reset" id="btnReiniciar" name="btnReiniciar" class="btn btn-info">
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
